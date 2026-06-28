@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:url("images/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.6);
+    min-height:100vh;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+    font-size:45px;
+}
+
+.category{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.category button{
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:#ff9800;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.category button:hover{
+    background:#ff5722;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border:3px solid transparent;
+    border-radius:15px;
+    overflow:hidden;
+    text-align:center;
+    transition:.4s;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h2{
+    margin:15px 0;
+}
+
+.card p{
+    color:#555;
+    padding:0 15px;
+}
+
+.card span{
+    display:inline-block;
+    margin:20px;
+    background:#ff5722;
+    color:white;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* Hover Effects */
+
+.card:hover{
+    transform:translateY(-12px);
+    border-color:#ff9800;
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+}

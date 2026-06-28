@@ -1,0 +1,53 @@
+body{
+font-family:Arial,sans-serif;
+}
+
+.hero{
+background:url("images/paris.jpg") center;
+background-size:cover;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:50px;
+font-weight:bold;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:20px;
+}
+
+.card{
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.card img{
+height:220px;
+object-fit:cover;
+}
+
+footer{
+margin-top:30px;
+}
+
+@media(max-width:768px){
+
+.hero{
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}

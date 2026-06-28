@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCore - Assignments</title>
+
+<link rel="stylesheet" href="assignments.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">EduCore</div>
+
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="courses.html">Courses</a>
+    <a href="assignments.html" class="active">Assignments</a>
+    <a href="gradebook.html">Gradebook</a>
+    <a href="messages.html">Messages</a>
+  </div>
+
+  <div class="nav-right">
+    <span>Sibiraj</span>
+    <a href="profile.html" class="btn btn-ghost" style="text-decoration:none; display:inline-block;">Profile</a>
+    <button class="btn btn-accent">+ Enroll</button>
+  </div>
+</nav>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <p class="sidebar-label">Main</p>
+    <a href="dashboard.html" class="sidebar-item">🏠 Dashboard</a>
+    <a href="courses.html" class="sidebar-item">📚 My Courses <span class="badge">6</span></a>
+    <a href="assignments.html" class="sidebar-item active">📝 Assignments <span class="badge badge-amber">3</span></a>
+    <a href="gradebook.html" class="sidebar-item">📊 Gradebook</a>
+    <a href="messages.html" class="sidebar-item">✉️ Messages <span class="badge">2</span></a>
+
+    <hr>
+
+    <p class="sidebar-label">Tools</p>
+    <a href="#" class="sidebar-item">📅 Calendar</a>
+    <a href="#" class="sidebar-item">🎥 Live Classes</a>
+    <a href="#" class="sidebar-item">💬 Discussion Boards</a>
+    <a href="#" class="sidebar-item">🏆 Certificates</a>
+    <a href="profile.html" class="sidebar-item">👤 My Profile</a>
+  </aside>
+
+  <main>
+
+    <div id="assignments" class="section visible">
+      <div class="page-header">
+        <h1>Assignments</h1>
+        <p>Track your submissions and upcoming tasks.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Pending Assignments</div>
+        <table>
+          <tr>
+            <th>Title</th>
+            <th>Course</th>
+            <th>Due Date</th>
+            <th>Points</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td>React Final Project</td>
+            <td>Web Development</td>
+            <td>Jun 20, 2026</td>
+            <td>100 pts</td>
+            <td><span class="chip chip-red">Due Soon</span></td>
+          </tr>
+          <tr>
+            <td>ML Model Report</td>
+            <td>Data Science</td>
+            <td>Jun 25, 2026</td>
+            <td>80 pts</td>
+            <td><span class="chip chip-amber">In Progress</span></td>
+          </tr>
+          <tr>
+            <td>UX Case Study</td>
+            <td>UI/UX Design</td>
+            <td>Jul 2, 2026</td>
+            <td>60 pts</td>
+            <td><span class="chip chip-blue">Not Started</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Submitted & Graded</div>
+        <table>
+          <tr>
+            <th>Title</th>
+            <th>Course</th>
+            <th>Submitted</th>
+            <th>Grade</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td>Data Structures Essay</td>
+            <td>Data Science</td>
+            <td>Jun 10</td>
+            <td>91/100</td>
+            <td><span class="chip chip-green">Graded</span></td>
+          </tr>
+          <tr>
+            <td>JavaScript Quiz 3</td>
+            <td>Web Development</td>
+            <td>Jun 8</td>
+            <td>88/100</td>
+            <td><span class="chip chip-green">Graded</span></td>
+          </tr>
+          <tr>
+            <td>Design Sprint</td>
+            <td>UI/UX Design</td>
+            <td>Jun 5</td>
+            <td>96/100</td>
+            <td><span class="chip chip-green">Graded</span></td>
+          </tr>
+          <tr>
+            <td>Business Memo</td>
+            <td>Business Comm.</td>
+            <td>May 30</td>
+            <td>-</td>
+            <td><span class="chip chip-amber">Under Review</span></td>
+          </tr>
+          <tr>
+            <td>Python Functions Lab</td>
+            <td>Data Science</td>
+            <td>May 25</td>
+            <td>79/100</td>
+            <td><span class="chip chip-green">Graded</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>

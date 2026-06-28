@@ -1,0 +1,393 @@
+
+/* basic reset so margins/padding don't mess up the layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F8FAFC;
+  color: #0F1F3D;
+}
+
+/* main page wrapper - sidebar + content side by side */
+.app {
+  display: flex;
+}
+
+main {
+  flex: 1;
+  padding: 30px;
+}
+
+/* used to show/hide each page when nav is clicked */
+.section {
+  display: none;
+}
+
+.section.visible {
+  display: block;
+}
+
+.page-header {
+  margin-bottom: 25px;
+}
+
+.page-header h1 {
+  font-size: 26px;
+}
+
+.page-header p {
+  color: #64748B;
+  margin-top: 5px;
+}
+
+/* buttons */
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-primary { background-color: #3B82F6; color: white; }
+.btn-accent  { background-color: #F59E0B; color: #0F1F3D; }
+.btn-success { background-color: #10B981; color: white; }
+.btn-ghost   { background: transparent; border: 1px solid white; color: white; }
+
+/* the white box used everywhere */
+.card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* layout helper - puts two cards side by side */
+.two-col {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.two-col .card {
+  flex: 1;
+}
+
+/* progress bars */
+.progress-item { margin-bottom: 12px; }
+.progress-item p { font-size: 14px; margin-bottom: 5px; }
+.progress-bg {
+  height: 8px;
+  background: #E2E8F0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  background: #3B82F6;
+}
+
+/* tables */
+table { width: 100%; border-collapse: collapse; }
+th {
+  text-align: left;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #64748B;
+  border-bottom: 2px solid #E2E8F0;
+}
+td { padding: 10px; border-bottom: 1px solid #E2E8F0; }
+
+/* little colored status labels */
+.chip {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.chip-green { background: #D1FAE5; color: #065F46; }
+.chip-amber { background: #FEF3C7; color: #92400E; }
+.chip-red   { background: #FEE2E2; color: #991B1B; }
+.chip-blue  { background: #DBEAFE; color: #1E40AF; }
+
+/* ---- navbar ---- */
+.navbar {
+  background-color: #0F1F3D;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  padding: 6px 12px;
+  margin-right: 5px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.nav-links a.active {
+  background-color: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+/* ---- sidebar ---- */
+.sidebar {
+  width: 220px;
+  background: white;
+  border-right: 1px solid #E2E8F0;
+  padding: 20px 15px;
+}
+
+.sidebar-label {
+  font-size: 11px;
+  color: #64748B;
+  text-transform: uppercase;
+  margin: 10px 0 5px;
+}
+
+.sidebar-item {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: #0F1F3D;
+  text-decoration: none;
+  margin-bottom: 3px;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+  background-color: #EEF3FB;
+}
+
+.badge {
+  background: #3B82F6;
+  color: white;
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.badge-amber {
+  background: #F59E0B;
+  color: #0F1F3D;
+}
+
+/* ---- dashboard ---- */
+.stats-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-box {
+  flex: 1;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #64748B;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* ---- courses ---- */
+.search-box {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+}
+
+/* using flex-wrap so boxes drop to the next row instead of a css grid */
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.course-box {
+  width: 30%;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.course-icon {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.course-name {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.course-info {
+  font-size: 13px;
+  color: #64748B;
+  margin-bottom: 8px;
+}
+
+/* ---- messages ---- */
+.messages-box {
+  display: flex;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  background: white;
+  min-height: 450px;
+}
+
+.chat-list {
+  width: 240px;
+  border-right: 1px solid #E2E8F0;
+}
+
+.chat-person {
+  padding: 12px;
+  border-bottom: 1px solid #E2E8F0;
+  cursor: pointer;
+}
+
+.chat-person.active {
+  background-color: #EEF3FB;
+}
+
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 15px;
+  border-bottom: 1px solid #E2E8F0;
+  font-weight: bold;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+}
+
+.msg-in, .msg-out {
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.msg-in {
+  background: #EEF3FB;
+}
+
+/* this trick pushes "my" messages to the right side */
+.msg-out {
+  background: #3B82F6;
+  color: white;
+  margin-left: auto;
+}
+
+.chat-input-row {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #E2E8F0;
+  gap: 10px;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+}
+
+/* ---- profile ---- */
+.profile-top {
+  background: linear-gradient(to right, #0F1F3D, #1A4B8C);
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  background: #F59E0B;
+  color: #0F1F3D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #64748B;
+}
+
+/* simple responsive tweak for smaller screens */
+@media (max-width: 700px) {
+  .sidebar { display: none; }
+  .stats-row { flex-wrap: wrap; }
+  .course-box { width: 100%; }
+  .two-col { flex-direction: column; }
+}

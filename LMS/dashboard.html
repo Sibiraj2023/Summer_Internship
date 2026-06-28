@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduCore - Dashboard</title>
+
+<link href="dashboard.css" rel="stylesheet"/></head>
+<body>
+<nav class="navbar">
+<div class="logo">EduCore</div>
+<div class="nav-links">
+<a class="active" href="dashboard.html">Dashboard</a>
+<a href="courses.html">Courses</a>
+<a href="assignments.html">Assignments</a>
+<a href="gradebook.html">Gradebook</a>
+<a href="messages.html">Messages</a>
+</div>
+<div class="nav-right">
+<span>Sibiraj</span>
+<a class="btn btn-ghost" href="profile.html" style="text-decoration:none; display:inline-block;">Profile</a>
+<button class="btn btn-accent">+ Enroll</button>
+</div>
+</nav>
+<div class="app">
+<aside class="sidebar">
+<p class="sidebar-label">Main</p>
+<a class="sidebar-item active" href="dashboard.html">🏠 Dashboard</a>
+<a class="sidebar-item" href="courses.html">📚 My Courses <span class="badge">6</span></a>
+<a class="sidebar-item" href="assignments.html">📝 Assignments <span class="badge badge-amber">3</span></a>
+<a class="sidebar-item" href="gradebook.html">📊 Gradebook</a>
+<a class="sidebar-item" href="messages.html">✉️ Messages <span class="badge">2</span></a>
+<hr/>
+<p class="sidebar-label">Tools</p>
+<a class="sidebar-item" href="#">📅 Calendar</a>
+<a class="sidebar-item" href="#">🎥 Live Classes</a>
+<a class="sidebar-item" href="#">💬 Discussion Boards</a>
+<a class="sidebar-item" href="#">🏆 Certificates</a>
+<a class="sidebar-item" href="profile.html">👤 My Profile</a>
+</aside>
+<main>
+<div class="section visible" id="dashboard">
+<div class="page-header">
+<h1>Good morning, Sibi👋</h1>
+<p>Here's what's happening in your learning journey today.</p>
+</div>
+<!-- 4 quick stat boxes -->
+<div class="stats-row">
+<div class="stat-box">
+<p class="stat-label">Enrolled Courses</p>
+<p class="stat-number">6</p>
+</div>
+<div class="stat-box">
+<p class="stat-label">Assignments Done</p>
+<p class="stat-number">18</p>
+</div>
+<div class="stat-box">
+<p class="stat-label">Average Grade</p>
+<p class="stat-number">88%</p>
+</div>
+<div class="stat-box">
+<p class="stat-label">Certificates Earned</p>
+<p class="stat-number">3</p>
+</div>
+</div>
+<div class="two-col">
+<div class="card">
+<div class="card-title">Course Progress</div>
+<div class="progress-item">
+<p>Web Development Fundamentals - 82%</p>
+<div class="progress-bg"><div class="progress-bar" style="width:82%"></div></div>
+</div>
+<div class="progress-item">
+<p>Data Science with Python - 65%</p>
+<div class="progress-bg"><div class="progress-bar" style="width:65%; background:#F59E0B"></div></div>
+</div>
+<div class="progress-item">
+<p>UI/UX Design Principles - 94%</p>
+<div class="progress-bg"><div class="progress-bar" style="width:94%; background:#10B981"></div></div>
+</div>
+<div class="progress-item">
+<p>Business Communication - 40%</p>
+<div class="progress-bg"><div class="progress-bar" style="width:40%; background:#F59E0B"></div></div>
+</div>
+</div>
+<div class="card">
+<div class="card-title">Recent Activity</div>
+<p><b>Prof. Malar</b> - Posted new quiz: "JavaScript Closures" <i>(2h ago)</i></p><br/>
+<p><b>You</b> - Submitted Assignment 4 - Data Structures <i>(5h ago)</i></p><br/>
+<p><b>Sam Kim</b> - Replied to your discussion post <i>(Yesterday)</i></p><br/>
+<p><b>Dr.virat</b> - Graded your midterm: 91/100 <i>(2 days ago)</i></p>
+</div>
+</div>
+<div class="card">
+<div class="card-title">Upcoming Deadlines</div>
+<table>
+<tr><th>Assignment</th><th>Course</th><th>Due Date</th><th>Status</th></tr>
+<tr><td>React Final Project</td><td>Web Development</td><td>Jun 20, 2026</td><td><span class="chip chip-red">Due Soon</span></td></tr>
+<tr><td>ML Model Report</td><td>Data Science</td><td>Jun 25, 2026</td><td><span class="chip chip-amber">In Progress</span></td></tr>
+<tr><td>UX Case Study</td><td>UI/UX Design</td><td>Jul 2, 2026</td><td><span class="chip chip-blue">Not Started</span></td></tr>
+</table>
+</div>
+</div>
+</main>
+</div>
+</body>
+</html>

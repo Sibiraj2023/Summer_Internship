@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EduCore - Messages</title>
+<link rel="stylesheet" href="messages.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">EduCore</div>
+
+  <div class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="courses.html">Courses</a>
+    <a href="assignments.html">Assignments</a>
+    <a href="gradebook.html">Gradebook</a>
+    <a href="messages.html" class="active">Messages</a>
+  </div>
+
+  <div class="nav-right">
+    <span>Sibiraj</span>
+    <a href="profile.html" class="btn btn-ghost" style="text-decoration:none; display:inline-block;">Profile</a>
+    <button class="btn btn-accent">+ Enroll</button>
+  </div>
+</nav>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <p class="sidebar-label">Main</p>
+    <a href="dashboard.html" class="sidebar-item">🏠 Dashboard</a>
+    <a href="courses.html" class="sidebar-item">📚 My Courses <span class="badge">6</span></a>
+    <a href="assignments.html" class="sidebar-item">📝 Assignments <span class="badge badge-amber">3</span></a>
+    <a href="gradebook.html" class="sidebar-item">📊 Gradebook</a>
+    <a href="messages.html" class="sidebar-item active">✉️ Messages <span class="badge">2</span></a>
+
+    <hr>
+
+    <p class="sidebar-label">Tools</p>
+    <a href="#" class="sidebar-item">📅 Calendar</a>
+    <a href="#" class="sidebar-item">🎥 Live Classes</a>
+    <a href="#" class="sidebar-item">💬 Discussion Boards</a>
+    <a href="#" class="sidebar-item">🏆 Certificates</a>
+    <a href="profile.html" class="sidebar-item">👤 My Profile</a>
+  </aside>
+
+  <main>
+
+    <div id="messages" class="section visible">
+      <div class="page-header">
+        <h1>Messages</h1>
+        <p>Communicate with instructors and peers.</p>
+      </div>
+
+      <div class="messages-box">
+        <div class="chat-list">
+          <p class="chat-person active">Prof. Malar<br><small>Your submission looks great!...</small></p>
+          <p class="chat-person">Dr. virat<br><small>Please review the updated dataset...</small></p>
+          <p class="chat-person">Study Group - Web Dev<br><small>Sam: Anyone done the React project?</small></p>
+          <p class="chat-person">Alex (TA)<br><small>Office hours are on Friday at 3pm</small></p>
+        </div>
+
+        <div class="chat-window">
+          <p class="chat-header">Prof.Malar - Web Development</p>
+
+          <div class="chat-messages">
+            <p class="msg-in">Hi Sibiraj! I reviewed your Assignment 3 submission. Your component architecture is solid - great use of hooks.</p>
+            <p class="msg-out">Thank you! I was a bit unsure about the custom hook pattern. Does it make sense to abstract it further?</p>
+            <p class="msg-in">Yes, that's a good instinct. For the final project, I'd recommend keeping each hook single-responsibility.</p>
+            <p class="msg-out">Perfect, I'll look at those. Will we cover Context API before the deadline?</p>
+          </div>
+
+          <div class="chat-input-row">
+            <input type="text" placeholder="Write a message..." class="chat-input">
+            <button class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </main>
+</div>
+
+<script>
+  // clicking a person in the chat list highlights them
+  var chatPeople = document.querySelectorAll('.chat-person');
+  for (var i = 0; i < chatPeople.length; i++) {
+    chatPeople[i].addEventListener('click', function () {
+      for (var j = 0; j < chatPeople.length; j++) {
+        chatPeople[j].classList.remove('active');
+      }
+      this.classList.add('active');
+    });
+  }
+</script>
+</body>
+</html>
